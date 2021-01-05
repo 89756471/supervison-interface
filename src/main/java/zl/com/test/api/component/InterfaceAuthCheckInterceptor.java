@@ -1,5 +1,6 @@
 package zl.com.test.api.component;
 
+import org.springframework.web.servlet.ModelAndView;
 import zl.com.test.api.service.impl.CacheSerivceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.Document;
@@ -46,6 +47,16 @@ public class InterfaceAuthCheckInterceptor implements HandlerInterceptor {
         boolean isAuth = this.isAuth(token, corpCode);
         log.info("公司编码为：{},token：{},IP地址：{},授权是否成功:{}", corpCode, token, request.getRemoteAddr(), isAuth);
         return isAuth;
+    }
+
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+
+    }
+
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+
     }
 
     private boolean isAuth(String token, String corpCode) {
