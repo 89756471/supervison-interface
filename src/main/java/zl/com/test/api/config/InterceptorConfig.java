@@ -46,7 +46,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(interfaceAuthCheckInterceptor).excludePathPatterns("/footStone/devRealTimeAlarm/getAlarmAndFaultTypePieData","/footStone/devRealTimeAlarm/getAlarmAndFaultTypeLineData").addPathPatterns("/**");
+        registry.addInterceptor(interfaceAuthCheckInterceptor).excludePathPatterns("/footStone/devRealTimeAlarm/getAlarmAndFaultTypePieData","/footStone/devRealTimeAlarm/getAlarmAndFaultTypeLineData","/**/*.html", "/**/*.js", "/**/*.css", "/**/*.json", "/**/*.icon").addPathPatterns("/**");
     }
 
     @Override
