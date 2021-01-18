@@ -43,7 +43,7 @@ public class Swagger2Config {
                 //服务条款URL
                 .termsOfServiceUrl("http://127.0.0.1:8080/")
                 //版本号
-                .version("1.0。0")
+                .version("1.0.0")
                 .build();
     }
 
