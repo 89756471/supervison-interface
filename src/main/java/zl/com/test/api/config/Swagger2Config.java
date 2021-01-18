@@ -42,8 +42,6 @@ public class Swagger2Config {
                 .description("接口说明")
                 //服务条款URL
                 .termsOfServiceUrl("http://127.0.0.1:8080/")
-                //联系信息
-                .contact("码农新锐")
                 //版本号
                 .version("1.0。0")
                 .build();
